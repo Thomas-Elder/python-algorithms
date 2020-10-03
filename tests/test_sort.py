@@ -14,7 +14,7 @@ class Test_Insertion:
     def teardown_method(self):
         pass
 
-    def test_sort(self, test_list):
+    def test_sortAscending(self, test_list):
         expected = [1, 2, 3, 4, 5]
 
         sorter = insertion.Insertion()
