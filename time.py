@@ -8,14 +8,14 @@ from algorithms.sort import insertion
 import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def executionTime(sorter , a: list):
+def executionTime(func , a: list):
 
     start = timer()
-    sorter.sort(a)
+    func(a)
     end = timer()
 
     logging.info(f'Exection time: {round(end-start, 2)} seconds')
 
 a = sample(range(1, 100000), 10000)
 sorter = insertion.Insertion()
-executionTime(sorter, a)
+executionTime(sorter.sort, a)
