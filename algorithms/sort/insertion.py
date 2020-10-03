@@ -4,7 +4,7 @@ class Insertion:
     def __init__(self):
         pass
 
-    def sort(self, a: list) -> list:
+    def sort(self, a: list, order='ascending') -> list:
 
         for j in range(1, len(a)): 
             key = a[j]
