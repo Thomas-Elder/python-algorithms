@@ -4,7 +4,7 @@ from algorithms.sort import insertion
 @pytest.fixture
 def test_list():
 
-    return [5, 4, 3, 2, 1]
+    return [4, 5, 2, 3, 1]
 
 class Test_Insertion:
 
