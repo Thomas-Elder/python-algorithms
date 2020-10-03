@@ -1,25 +1,21 @@
 
-class LinearSearch:
+def linearSearch(a: list, v: int) -> int:
+    '''Returns the index of the value v, in list a 
 
-    def __init__(self):
-        pass
+    If v is not found in a, then -1 is returned.
 
-    def find(self, a: list, v: int) -> int:
-        '''Returns the index of the value v, in list a 
+    Parameters
+    ----------
+    a: a list of integers
+    v: an integer
 
-        If v is not found in a, then -1 is returned.
+    Returns
+    -------
+    The index of value v in list a
+    '''
+    
+    for j in range(len(a)):
+        if a[j] == v:
+            return j
 
-        Parameters
-        ----------
-        a: a list of integers
-        v: an integer
-
-        Returns
-        -------
-        The index of value v in list a
-        '''
-        for j in range(len(a)):
-            if a[j] == v:
-                return j
-
-        return -1
+    return -1
