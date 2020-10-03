@@ -5,6 +5,17 @@ class Insertion:
         pass
 
     def sort(self, a: list, order='ascending') -> list:
+        '''Sorts the list a in ascending order by default
+
+        Parameters
+        ----------
+        a: a list of integers
+        order: a string, can be ascending or descending
+
+        Returns
+        -------
+        A list of sorted integers
+        '''
 
         if order == 'ascending':
             for j in range(1, len(a)): 
