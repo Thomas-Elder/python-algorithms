@@ -21,3 +21,11 @@ class Test_Insertion:
         result = searcher.find(test_list, 5)
 
         assert result == expected
+
+    def test_findFailure(self, test_list):
+        expected = -1
+
+        searcher = linear.LinearSearch()
+        result = searcher.find(test_list, 6)
+
+        assert result == expected
