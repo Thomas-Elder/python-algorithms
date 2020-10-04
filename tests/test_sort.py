@@ -1,5 +1,5 @@
 import pytest
-from algorithms.sort import insertion 
+from algorithms.sort.insertion import insertion
 
 @pytest.fixture
 def test_list():
@@ -17,15 +17,13 @@ class Test_Insertion:
     def test_sortAscending(self, test_list):
         expected = [1, 2, 3, 4, 5]
 
-        sorter = insertion.Insertion()
-        result = sorter.sort(test_list, order='ascending')
+        result = insertion(test_list, order='ascending')
 
         assert result == expected
 
     def test_sortDescending(self, test_list):
         expected = [5, 4, 3, 2, 1]
 
-        sorter = insertion.Insertion()
-        result = sorter.sort(test_list, order='descending')
+        result = insertion(test_list, order='descending')
 
         assert result == expected
