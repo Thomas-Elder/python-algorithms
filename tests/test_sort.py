@@ -1,5 +1,6 @@
 import pytest
 from algorithms.sort.insertion import insertion
+from algorithms.sort.merge import merge
 
 @pytest.fixture
 def test_list():
@@ -25,5 +26,20 @@ class Test_Insertion:
         expected = [5, 4, 3, 2, 1]
 
         result = insertion(test_list, order='descending')
+
+        assert result == expected
+
+class Test_Merge:
+
+    def setup_method(self):
+        pass
+
+    def teardown_method(self):
+        pass
+
+    def test_sortAscending(self, test_list):
+        expected = [1, 2, 3, 4, 5]
+
+        result = merge(test_list)
 
         assert result == expected
