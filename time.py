@@ -3,24 +3,33 @@ from timeit import default_timer as timer
 from random import sample
 
 from algorithms.sort.insertion import insertion
+from algorithms.sort.merge import merge
 from algorithms.search.linear import linearSearch
 
 # logging
 import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-a = sample(range(1, 100000), 10000)
-
+# Insertion sort
+a = sample(range(1, 10000000), 1000000)
 start = timer()
 insertion(a, order='ascending')
 end = timer()
 
-logging.info(f'Exection time: {round(end-start, 2)} seconds')
+print(f'Insertion sort exection time: {round(end-start, 2)} seconds')
 
-a = sample(range(1, 100000), 10000)
+# Merge sort
+a = sample(range(1, 10000000), 1000000)
+start = timer()
+merge(a)
+end = timer()
 
+print(f'Merge sort exection time: {round(end-start, 2)} seconds')
+
+# Linear search
+a = sample(range(1, 10000000), 1000000)
 start = timer()
 linearSearch(a, 100)
 end = timer()
 
-logging.info(f'Exection time: {round(end-start, 2)} seconds')
+print(f'Linear search exection time: {round(end-start, 2)} seconds')
