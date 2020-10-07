@@ -2,6 +2,7 @@ import pytest
 from algorithms.sort.insertion import insertion
 from algorithms.sort.merge import merge
 from algorithms.sort.bubble import bubble
+from algorithms.sort.heap import heap
 
 @pytest.fixture
 def test_list():
@@ -57,5 +58,20 @@ class Test_Bubble:
         expected = [1, 2, 3, 4, 5]
 
         result = bubble(test_list)
+
+        assert result == expected
+
+class Test_Heap:
+
+    def setup_method(self):
+        pass
+
+    def teardown_method(self):
+        pass
+
+    def test_sortAscending(self, test_list):
+        expected = [1, 2, 3, 4, 5]
+
+        result = heap(test_list)
 
         assert result == expected
