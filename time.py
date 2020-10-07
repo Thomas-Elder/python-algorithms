@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 def unsortedList():
     a = []
-    for i in range(1, 1000):
+    for _i in range(1, 10000):
         a.append(random.randint(1, 20))
 
     return a
