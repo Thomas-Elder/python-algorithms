@@ -21,7 +21,7 @@ class Test_Insertion:
     def test_sortAscending(self, test_list):
         expected = [1, 2, 3, 4, 5]
 
-        result = insertion(test_list, order='ascending')
+        result = insertion(test_list)
 
         assert result == expected
 
@@ -43,7 +43,7 @@ class Test_Selection:
     def test_sortAscending(self, test_list):
         expected = [1, 2, 3, 4, 5]
 
-        result = selection(test_list, order='ascending')
+        result = selection(test_list)
 
         assert result == expected
 
@@ -80,7 +80,7 @@ class Test_Bubble:
     def test_sortAscending(self, test_list):
         expected = [1, 2, 3, 4, 5]
 
-        result = bubble(test_list, order='ascending')
+        result = bubble(test_list)
 
         assert result == expected
 
@@ -103,5 +103,12 @@ class Test_Heap:
         expected = [1, 2, 3, 4, 5]
 
         result = heap(test_list)
+
+        assert result == expected
+
+    def test_sortDescending(self, test_list):
+        expected = [1, 2, 3, 4, 5]
+
+        result = heap(test_list, order='descending')
 
         assert result == expected
