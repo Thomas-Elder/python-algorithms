@@ -80,7 +80,14 @@ class Test_Bubble:
     def test_sortAscending(self, test_list):
         expected = [1, 2, 3, 4, 5]
 
-        result = bubble(test_list)
+        result = bubble(test_list, order='ascending')
+
+        assert result == expected
+
+    def test_sortDescending(self, test_list):
+        expected = [5, 4, 3, 2, 1]
+
+        result = bubble(test_list, order='descending')
 
         assert result == expected
 
