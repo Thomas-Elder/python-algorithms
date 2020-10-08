@@ -3,6 +3,7 @@ from algorithms.sort.insertion import insertion
 from algorithms.sort.merge import merge
 from algorithms.sort.bubble import bubble
 from algorithms.sort.heap import heap
+from algorithms.sort.selection import selection
 
 @pytest.fixture
 def test_list():
@@ -21,6 +22,28 @@ class Test_Insertion:
         expected = [1, 2, 3, 4, 5]
 
         result = insertion(test_list, order='ascending')
+
+        assert result == expected
+
+    def test_sortDescending(self, test_list):
+        expected = [5, 4, 3, 2, 1]
+
+        result = insertion(test_list, order='descending')
+
+        assert result == expected
+
+class Test_Selection:
+
+    def setup_method(self):
+        pass
+
+    def teardown_method(self):
+        pass
+
+    def test_sortAscending(self, test_list):
+        expected = [1, 2, 3, 4, 5]
+
+        result = selection(test_list, order='ascending')
 
         assert result == expected
 
