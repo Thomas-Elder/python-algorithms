@@ -1,5 +1,5 @@
 
-def selection(a: list, order: str) -> list:
+def selection(a: list, order='ascending') -> list:
 
     if order == 'ascending':
 
