@@ -121,10 +121,3 @@ class Test_Heap:
         result = heap(test_list)
 
         assert result == expected
-
-    def test_sortDescending(self, test_list):
-        expected = [1, 2, 3, 4, 5]
-
-        result = heap(test_list, order='descending')
-
-        assert result == expected
