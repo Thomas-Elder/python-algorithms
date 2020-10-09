@@ -4,6 +4,7 @@ from random import sample
 import random
 
 from algorithms.sort.insertion import insertion
+from algorithms.sort.selection import selection
 from algorithms.sort.merge import merge
 from algorithms.sort.bubble import bubble
 from algorithms.sort.bubble import bubble_recursive
@@ -31,6 +32,14 @@ end = timer()
 
 print(f'Insertion sort exection time: {round(end-start, 2)} seconds')
 
+# Selection sort
+a = unsortedList()
+start = timer()
+selection(a, order='ascending')
+end = timer()
+
+print(f'Selection sort exection time: {round(end-start, 2)} seconds')
+
 # Merge sort
 a = unsortedList()
 start = timer()
@@ -53,7 +62,7 @@ start = timer()
 bubble_recursive(a)
 end = timer()
 
-print(f'Bubble sort exection time: {round(end-start, 2)} seconds')
+print(f'Recursive bubble sort exection time: {round(end-start, 2)} seconds')
 
 # Linear search
 a = unsortedList()
