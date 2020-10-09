@@ -2,6 +2,7 @@ import pytest
 from algorithms.sort.insertion import insertion
 from algorithms.sort.merge import merge
 from algorithms.sort.bubble import bubble
+from algorithms.sort.bubble import bubble_recursive
 from algorithms.sort.heap import heap
 from algorithms.sort.selection import selection
 
@@ -88,6 +89,21 @@ class Test_Bubble:
         expected = [5, 4, 3, 2, 1]
 
         result = bubble(test_list, order='descending')
+
+        assert result == expected
+
+class Test_BubbleRecursive:
+
+    def setup_method(self):
+        pass
+
+    def teardown_method(self):
+        pass
+
+    def test_sortAscending(self, test_list):
+        expected = [1, 2, 3, 4, 5]
+
+        result = bubble_recursive(test_list)
 
         assert result == expected
 
