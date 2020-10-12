@@ -4,6 +4,7 @@ from algorithms.sort.merge import merge
 from algorithms.sort.bubble import bubble
 from algorithms.sort.bubble import bubble_recursive
 from algorithms.sort.heap import heap
+from algorithms.sort.quick import quick
 from algorithms.sort.selection import selection
 
 @pytest.fixture
@@ -119,5 +120,20 @@ class Test_Heap:
         expected = [1, 2, 3, 4, 5]
 
         result = heap(test_list)
+
+        assert result == expected
+
+class Test_Quick:
+
+    def setup_method(self):
+        pass
+
+    def teardown_method(self):
+        pass
+
+    def test_sortAscending(self, test_list):
+        expected = [1, 2, 3, 4, 5]
+
+        result = quick(test_list, 0, len(test_list) - 1)
 
         assert result == expected
